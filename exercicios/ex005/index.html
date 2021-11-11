@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros com JS</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calculo()">Clique para calcular</button><br>
+    <section id="resultado">
+        <p>O resultado vem aqui...</p>
+    </section>
+    <script>
+        window.alert('Seja bem vindo ao meu site!')
+        function calculo(){
+            let numero = window.prompt('Digite um número')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `O dobro de ${numero} é ${numero*2} e a metade é ${numero/2}`
+
+        }
+    </script>
+    
+</body>
+</html>
