@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar Salario</title>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="salario()">Reajustar salario</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+    <script>
+        function salario(){
+            let nome = window.prompt('Qual é o nome do funcionario?')
+            let sal = window.prompt(`Qual é o sálario de ${nome}?`)
+            let por = window.prompt(`O sálario de ${nome} vai ser reajustado em qual porcentagem?`)
+            let res = window.document.querySelector('section#resultado')
+            res.innerHTML = `<h2>${nome} recebeu um aumento salarial!</h2>`
+            res.innerHTML += `<p>O sálario atual era ${sal}</p>`
+            res.innerHTML += `<p>Com o aumento de ${por}%, o sálario vai aumentar ${sal*por/100} no próximo mes.</p>`
+            res.innerHTML += `<p>E a partir dai, ${nome} vai passar a ganhar ${((por/100)+1)*sal}.</p>`
+        }
+    </script>
+    
+</body>
+</html>
