@@ -19,7 +19,7 @@
             let por = window.prompt(`O sálario de ${nome} vai ser reajustado em qual porcentagem?`)
             let res = window.document.querySelector('section#resultado')
             res.innerHTML = `<h2>${nome} recebeu um aumento salarial!</h2>`
-            res.innerHTML += `<p>O sálario atual era ${sal}</p>`
+            res.innerHTML += `<p>O sálario atual era ${sal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>`
             res.innerHTML += `<p>Com o aumento de ${por}%, o sálario vai aumentar ${sal*por/100} no próximo mes.</p>`
             res.innerHTML += `<p>E a partir dai, ${nome} vai passar a ganhar ${((por/100)+1)*sal}.</p>`
         }
