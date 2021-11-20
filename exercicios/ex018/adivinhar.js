@@ -11,6 +11,7 @@ function adivinhar(){
     }
     else{
         res.innerHTML += `<p><mark>PARABÉNS!</mark> Você acertou! Eu tinha sorteado o valor ${numero}!</p>`
+        document.getElementById('botao').style.visibility = 'hidden'
     }
 
 }
